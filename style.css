@@ -1,0 +1,474 @@
+/*----------------------General----------------------*/
+body {
+  font-family: 'Times New Roman', Times, serif;
+  color: #272829;
+}
+
+a {
+  color: #149ddd;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #37b3ed;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/*---------------------------------------------------*/
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  transition: all ease-in-out 0.5s;
+  z-index: 9997;
+  padding: 0 15px;
+  background: #040b14;
+  overflow-y: auto;
+}
+#header .profile h1 {
+  font-size: 24px;
+  margin-top: 25%;
+  padding: 0;
+  font-weight: 600;
+
+  text-align-last: center;
+  font-family: "Poppins", sans-serif;
+}
+#header .profile h1 a,
+#header .profile h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*-----------------------------------Nav-----------------------------------------  */
+.nav {
+  padding: 30px 0 0 0;
+}
+.nav * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+.menu-icon {
+  cursor: pointer;
+  display: block;
+  font-size: 24px;
+  text-align: right;
+  padding: 14px 16px;
+}
+.nav-menu {
+  overflow: hidden;
+  background-color: lightgoldenrodyellow;
+  position: relative;
+  z-index: 10000;
+  list-style: none;
+  padding: none;
+}
+.nav>menu>ul>li {
+  position: relative;
+  white-space: nowrap;
+}
+.nav a,
+.nav a:focus {
+  display: flex;
+  align-items: center;
+  color: #a8a9b4;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.nav a:hover,
+.nav .active,
+.nav .active:focus,
+.nav li:hover>a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav a:hover i,
+.nav .active i,
+.nav .active:focus i,
+.nav li:hover>a i {
+  color: #149ddd;
+}
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9998;
+  border: 0;
+  font-size: 24px;
+  transition: all 0.4s;
+  outline: none !important;
+  background-color: #149ddd;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.mobile-nav-active {
+  overflow: hidden;
+}
+
+.mobile-nav-active #header {
+  left: 0;
+}
+@media screen and (max-width: 600px) {
+            nav {
+                text-align: center; /* Center-align text for smaller screens */
+            }
+
+            nav ul {
+                display: block; /* Display items vertically */
+                text-align: center; /* Center-align text for smaller screens */
+            }
+
+            nav li {
+                display: block; /* Display items vertically */
+                margin: 5px 0; /* Add space between vertical items */
+            }
+        }
+
+/*----------------------------------------------------------------------------  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: url("images/IMG_7183.JPG") top center;
+  background-size: cover;
+  position: relative;
+}
+
+#hero:before {
+  content: "";
+  background: rgba(5, 13, 24, 0.3);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#hero .hero-container {
+  text-align: center;
+  z-index: 2;
+  min-width: 300px;
+  position: relative;
+}
+
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+#hero p {
+  color: #fff;
+  margin-bottom: 50px;
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+}
+
+#hero p span {
+  color: #fff;
+  padding-bottom: 4px;
+  letter-spacing: 1px;
+  /* border-bottom: 3px solid #149ddd; */
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+/*------------------------------------------ Main -------------------------------------  */
+#main {
+  margin-left: 300px;
+}
+
+.container,
+.container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@media (max-width: 1199px) {
+  #header {
+    left: -300px;
+  }
+
+  #main {
+    margin-left: 0;
+  }
+
+  .container,
+  .container-fluid {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+/*------------------------------ Section General -----------------------------  */
+section {
+  padding: 60px 0;
+  overflow: hidden;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.section-bg {
+  background: #f5f8fd;
+}
+
+.section-title {
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #173b6c;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #149ddd;
+  bottom: 0;
+  left: 0;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+/*------------------------About Me--------------------------------*/
+/* .home .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #173b6c;
+} */
+
+.home .content p:last-child {
+  margin-bottom: 0;
+}
+
+/* ----------------------------- Education --------------------------------- */
+.education {
+  padding-bottom: 30px;
+}
+table,
+th,
+td {
+  border-collapse: collapse;
+  content: none;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+th {
+  background-color: #D7DBDD;
+  color: black;
+}
+
+/*----------------------------------- Resume ----------------------------------*/
+.resume {
+  padding-bottom: 30px;
+}
+
+
+/*----------------------------------- Contact----------------------------*/
+/* Style for the contact section */
+/* Style for the contact section */
+/* Style for the contact section */
+#contact {
+  padding: 60px 0;
+}
+
+/* Style for the section title */
+.section-title {
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #173b6c;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #149ddd;
+  bottom: 0;
+  left: 0;
+}
+
+
+.row {
+  margin-top: 20px; 
+}
+
+.col-lg-5,
+.col-lg-7 {
+  display: flex;
+  align-items: stretch;
+}
+
+.info,
+.form-group {
+  width: 100%;
+}
+
+
+iframe {
+  padding-bottom: 50px;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Style for the form */
+form {
+  background-color: #f5f8fd;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%; /* Set form width to 100% */
+  max-width: 600px; /* Set max-width for better readability */
+  margin: 0 auto; /* Center the form */
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+.form-container input {
+  margin-bottom: 10px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.text-center {
+  text-align: center;
+}
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #149ddd;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0372a1;
+}
+
+
+
+/* ===================================================== */
+
+/* Style for both buttons */
+form input[type="submit"],
+form input[type="reset"] {
+  width: 35%;
+  /* Set the width of both buttons */
+  margin-right: 10px;
+}
+
+footer {
+  margin-left: 300px;
+  color: black;
+  height: 100px;
+  text-align: center;
+}
+
+.social-media-links {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.social-media-links a {
+  font-size: 20px;
+  margin: 0 10px 0 0;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 50%;
+  transition: color 0.3s ease;
+}
